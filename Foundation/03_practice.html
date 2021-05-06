@@ -1,10 +1,10 @@
 <!--
  * @Author: sandwich
  * @Date: 2021-04-20 17:37:02
- * @LastEditTime: 2021-04-27 11:51:18
+ * @LastEditTime: 2021-05-03 13:29:56
  * @LastEditors: sandwich
  * @Description: In User Settings Edit
- * @FilePath: /H5C3/Foundation/03_practice.html
+ * @FilePath: /Foundation/03_practice.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -205,12 +205,45 @@
             <dd>联系我们</dd>
         </dl>
         <h1>表单</h1>
-        <form action="demo.php" method="POST" name="name1">
-            用户名: <input type="text" /> <br />
+        <form action="demo.php" method="GET" name="name1">
+            用户名:
+            <input
+                type="text"
+                name="username"
+                value="请输入用户名"
+                maxlength="8"
+            />
+            <br />
             密码: &nbsp;&nbsp;&nbsp;<input type="password" /> <br />
             <!-- name一致才能实现单选效果 -->
-            性别: <input type="radio" name="gender">男 <input type="radio" name="gender">女 <br>
-            爱好: <input type="checkbox" name="" id="">吃饭 <input type="checkbox" name="" id="">睡觉 <input type="checkbox" name="" id="">打豆豆
+            性别: <input type="radio" name="gender" value="男" id="man" />
+            <label for="man">男</label>
+            <label
+                ><input
+                    type="radio"
+                    name="gender"
+                    value="女"
+                    checked="checked"
+                />女</label
+            >
+            <br />
+            爱好: <input type="checkbox" name="hobby" value="吃饭" />吃饭
+            <input type="checkbox" name="hobby" value="睡觉" />睡觉
+            <input type="checkbox" name="hobby" value="打豆豆" />打豆豆 <br />
+            地址:
+            <select name="addr">
+                <option value="">福建</option>
+                <option value="js" selected="selected">江苏</option>
+                <option value="">安徽</option>
+            </select>
+            <br />
+            留言: <br />
+            <textarea name="msg" cols="30" rows="10">期待您的反馈
+            </textarea> <br />
+            <input type="submit" name="submit" value="免费注册" />
+            <input type="reset" value="重新填写" />
+            <input type="button" value="发送获取短信验证码" /> <br />
+            <input type="file" value="选择图片" /> <br />
         </form>
     </body>
 </html>
